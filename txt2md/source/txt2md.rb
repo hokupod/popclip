@@ -3,7 +3,7 @@
 
 $KCODE = 'u'
 
-def two_byte_encord(utf_8_mac_text)
+def two_byte_encode(utf_8_mac_text)
   utf_8_mac_text.gsub("\u309B", "\u3099").gsub("\u309C", "\u309A")
   .encode("UTF-8", "UTF-8-MAC")
 end
@@ -24,7 +24,7 @@ text_in.reverse_each do |paragraph|
   heading_check = before_text.scan(heading_prefix).size
   list_check = before_text.scan(list_prefix).size
 
-  text = two_byte_encord(paragraph.gsub(indent, ""))
+  text = two_byte_encode(paragraph.gsub(indent, ""))
   title = text + "\n========\n"
   heading = "#" * (count + 1) + " " + text
   list1 = "- " + text + "\n\n"
