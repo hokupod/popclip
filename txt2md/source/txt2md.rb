@@ -17,7 +17,6 @@ write_text = Array.new
 
 before_count = 0
 before_text = ""
-i = 0
 
 text_in.reverse_each do |paragraph|
   count = paragraph.scan(indent).size
@@ -31,18 +30,17 @@ text_in.reverse_each do |paragraph|
   list2 = "- " + text
 
   if count == 0
-    write_text[i] = title
+    write_text << title
   elsif before_count < count && list_check == 0
-    write_text[i] = list1
+    write_text << list1
   elsif before_count <= count && list_check != 0 && heading_check == 0
-    write_text[i] = list2
+    write_text << list2
   else
-    write_text[i] = heading
+    write_text << heading
   end
 
   before_count = count
-  before_text = write_text[i]
-  i += 1
+  before_text = write_text.last
 end
 
 write_text.reverse_each do |md|
