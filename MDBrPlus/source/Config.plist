@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Actions</key>
+	<array>
+		<dict>
+			<key>After</key>
+			<string>paste-result</string>
+			<key>Image File</key>
+			<string>MDBrPlus.png</string>
+			<key>Script Interpreter</key>
+			<string>/usr/bin/ruby</string>
+			<key>Shell Script File</key>
+			<string>MDBrPlus.rb</string>
+			<key>Title</key>
+			<string>MDBrPlus</string>
+		</dict>
+	</array>
+	<key>Credits</key>
+	<array>
+		<dict>
+			<key>Link</key>
+			<string>http://qiita.com/hokupod</string>
+			<key>Name</key>
+			<string>Hokuto Takemiya</string>
+		</dict>
+	</array>
+	<key>Extension Description</key>
+	<string>Output by adding two spaces to the selected text using ruby.</string>
+	<key>Extension Identifier</key>
+	<string>com.qiita.popclip.extention.MDBrPlus</string>
+	<key>Extension Name</key>
+	<string>MDBrPlus</string>
+	<key>Required Apps</key>
+	<integer>701</integer>
+</dict>
+</plist>
